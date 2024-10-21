@@ -1,62 +1,26 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>お問い合せ</title>
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+  </head>
+<body>
+<h1>フォーム</h1>
+<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfkNMSZiFnhL-MEpGYy32OPHLWB6b_RwR4qjXhCwORgkivToQ/formResponse" method="post">
 
-	<!-- Google Form -->
-	<form
-		action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfkNMSZiFnhL-MEpGYy32OPHLWB6b_RwR4qjXhCwORgkivToQ/formResponse"
-		method="POST"
-		target="hidden_iframe"
-		onsubmit="submitted=true;"
-		class="c-form"
-	>
-	
-	<link rel="stylesheet" href="assets/css/main.css" />
+お名前を教えてください<br>
+<input type="text" name="entry.572669685"><br>
+<br>
+満足度はいかがでしょうか？<br>
+<input type="radio" name="entry.440822596" value="満足">満足です！<br>
+<input type="radio" name="entry.440822596" value="普通">普通でした。<br>
+<input type="radio" name="entry.440822596" value="不満">不満です。。。<br>
+<br>
+ご意見があれば記述お願いします。<br>
+<textarea name="entry.948431332" rows="3" cols="50"></textarea>
+<br>
+<button type="submit">送信</button>
 
-	<h1 style="text-align: center;">お問い合せ</h1>
-
-	<p style="text-align: center; margin: 20px auto">
-		下記の項目を入力して、「送信する」のボタンを押して下さい。<br>必須の欄は必ず全てご記入下さい。
-	</p>
-
-	<p style="text-align: center; margin: 40px auto">
-		※回答までには1週間程度かかる場合もございます。御了承下さい。
-	</p>
-<!-- Audio File -->
-	<div style="text-align: center; margin: 20px auto;">
-		<p>以下の音声を聞いて、内容に関するお問い合わせを入力してください。</p>
-		<audio controls>
-			<source src="test.wav" type="audio/wav" />
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-	<form class="c-form">
-		<div class="c-form__item">
-			<label class="c-form__label" for="field-name"
-				>名前・会社名<span class="c-form__required">必須</span></label
-			>
-			<input
-				name="entry.440822596"
-				class="c-form__input"
-				id="field-name"
-				placeholder="氏名"
-				type="text"
-				required="required"
-			/>
-	
-		<div class="c-form__submit">
-			<button type="submit">送信する</button>
-		</div>
-	</form>
-
-	<script type="text/javascript">
-		let submitted = false;
-	</script>
-
-	
+</form>
+</body>
 </html>
