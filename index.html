@@ -1,33 +1,139 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Form</title>
-  </head>
+    <title>卒業論文のアンケート</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .introduction {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .radio-group {
+            margin-top: 15px;
+        }
+
+        .radio-option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .radio-option:hover {
+            background-color: #e9ecef;
+        }
+
+        button[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        audio {
+            width: 100%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
 <body>
-<h1>フォーム</h1>
-<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfkNMSZiFnhL-MEpGYy32OPHLWB6b_RwR4qjXhCwORgkivToQ/formResponse" method="post">
+    <div class="container">
+        <h1>卒業論文のアンケート</h1>
+        
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfkNMSZiFnhL-MEpGYy32OPHLWB6b_RwR4qjXhCwORgkivToQ/formResponse" method="post">
+            <div class="introduction">
+                <p>これからいくつの設問で音声を聞き、なんと聞こえたか選んでいただきたいです。聞いていただくのは日本語の単語です。</p>
+                
+                <p>今回卒業研究で特定の周波数の音量を0にした時の言語認知を研究することになりました。そのため、今回皆さんにいくつかの音声を聞いていただきたいです。今回のアンケートで得たデータは本研究のみに利用することを約束いたします。</p>
+                
+                <p>もし、気持ちが変わりデータを削除したくなった場合は何らかの私の連絡先もしくは「1cbc1117@cc.u-tokai.ac.jp」までご連絡ください。</p>
+            </div>
 
-お名前を教えてください<br>
-<input type="text" name="entry.440822596"><br>
-<br>
-満足度はいかがでしょうか？<br>
+            <div class="form-group">
+                <label>年代をお答えください（例：20代）</label>
+                <input type="text" name="entry.440822596">
+            </div>
 
-<br>以下の音声を聞いて、内容に関するお問い合わせを入力してください。<br>
-<audio controls>
-  <source src="test.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+            <div class="form-group">
+                <label>以下の音声を聞いて、聞こえた音をお選びください</label>
+                <audio controls>
+                    <source src="test.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
 
-<input type="radio" name="entry.415868777" value="あ">満足です！<br>
-<input type="radio" name="entry.415868777" value="い">普通でした。<br>
-<input type="radio" name="entry.415868777" value="聞こえない">不満です。。。<br>
-<br>
-ご意見があれば記述お願いします。<br>
-<textarea name="entry.948431332" rows="3" cols="50"></textarea>
-<br>
-<button type="submit">送信</button>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="entry.415868777" value="あ"> あ
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="entry.415868777" value="い"> い
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="entry.415868777" value="聞こえない"> 聞こえない
+                    </label>
+                </div>
+            </div>
 
-</form>
+            <button type="submit">送信</button>
+        </form>
+    </div>
 </body>
 </html>
