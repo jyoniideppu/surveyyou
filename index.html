@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -7,38 +6,48 @@
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 15px;
+            line-height: 1.4;
             color: #333;
             background-color: #f5f5f5;
+            font-size: 14px;
         }
 
         .container {
             background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         h1 {
             color: #2c3e50;
             text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #3498db;
+            padding-bottom: 8px;
+            font-size: 24px;
         }
 
         .introduction {
             background-color: #f8f9fa;
-            padding: 20px;
+            padding: 15px;
             border-radius: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .form-group {
-            margin-bottom: 25px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
         }
 
         label {
@@ -50,48 +59,45 @@
 
         input[type="text"] {
             width: 100%;
-            padding: 8px;
+            padding: 6px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-size: 16px;
         }
 
         .radio-group {
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .radio-option {
             display: block;
-            margin: 10px 0;
-            padding: 10px;
+            margin: 8px 0;
+            padding: 8px;
             background-color: #f8f9fa;
             border-radius: 4px;
             cursor: pointer;
         }
 
-        .radio-option:hover {
-            background-color: #e9ecef;
-        }
-
         button[type="submit"] {
             background-color: #3498db;
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border: none;
             border-radius: 4px;
-            font-size: 16px;
             cursor: pointer;
             display: block;
-            margin: 30px auto 0;
+            margin: 20px auto 0;
         }
 
-        button[type="submit"]:hover {
-            background-color: #2980b9;
+        .important-note {
+            color: #e74c3c;
+            font-weight: bold;
         }
 
-        audio {
-            width: 100%;
-            margin: 20px 0;
+        .contact-info {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -99,20 +105,26 @@
     <div class="container">
         <h1>卒業論文のアンケート</h1>
         
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfkNMSZiFnhL-MEpGYy32OPHLWB6b_RwR4qjXhCwORgkivToQ/formResponse" method="post">
+        <form action="https://docs.google.comORgkivToQ/formResponse" method="post">
             <div class="introduction">
-               
+                <p>本研究では、特定の周波数の音量を0にした際の言語認知について調査しています。全25問の音声に関する質問にお答えいただきます。</p>
                 
-                <p>今回、卒業研究で特定の周波数の音量を0にした際の言語認知を研究することになりました。そのため、今回皆さんにいくつかの音声を聞いていただきます。設問は全部で25問です。</p>
-                <p>今回のアンケートで得たデータは本研究のみに利用することを約束いたします。</p>
-                <p>本アンケートでは年齢と性別を問う設問がありますが、回答は任意です。</p>
-                <p>もし、なにかありましたら下記の連絡先までご連絡ください。</p>
-                <p>もし表示が崩れたり、音声が聞こえない等の問題が発生したら、ただちに回答をやめ、下記連絡先までご連絡ください。(適当な回答が一番困るので最悪連絡はなくていいですが、適当な回答は送信しないでください)</p>
-                <p>お一人、一回の回答でお願いします。</p>
-                <p>本アンケートは完全匿名アンケートです。そのため、もしデータの削除を希望されてもどのデータか特定が難しいため、ご希望に沿うのは難かしいと思いますが、念のためご連絡ください。</p>
-                <p>連絡先　メールアドレス　　1cbc1117@cc.u-tokai.ac.jp</p>
-            </div>
+                <p>【重要事項】</p>
+                <ul>
+                    <li>本アンケートで取得したデータは本研究のみに使用します</li>
+                    <li>年齢・性別の回答は任意です</li>
+                    <li>お一人様一回のみの回答でお願いします</li>
+                    <li>完全匿名式のアンケートです</li>
+                </ul>
 
+                <p class="important-note">※表示の乱れや音声が聞こえない場合は、回答を中止し下記までご連絡ください。</p>
+                <p class="important-note">※送信後、Google Formの「回答を記録しました」が表示されない場合は、回答を中止しご連絡ください。</p>
+
+                <div class="contact-info">
+                    <p>お問い合わせ先：<br><br>
+                    メールアドレス:1cbc1117@cc.u-tokai.ac.jp</p>
+                </div>
+            </div>
             <div class="form-group">
                 <label>年齢、もしくは年代をお答えください（例：22歳）(例：20代)</label>
                 <input type="text" name="entry.1032926130">
